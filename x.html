@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        canvas {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chào mừng bạn đến với trang QR!</h1>
+    <canvas id="qr-code"></canvas>
+    
+    <script>
+        var qr = new QRious({
+            element: document.getElementById('qr-code'),
+            value: 'https://example.com', // Thay đổi link này thành nội dung bạn muốn
+            size: 200
+        });
+    </script>
+</body>
+</html>
